@@ -1,2 +1,2 @@
-Norme : ISO-8859-1
+Norme pour les accents : ISO-8859-1
 Language : Français
