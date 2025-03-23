@@ -26,6 +26,7 @@ namespace CbVitrineNet
             }
 
             app.UseStaticFiles();
+            app.UseAntiforgery();
 
             app.MapRazorComponents<App>().AddInteractiveServerRenderMode();
 
