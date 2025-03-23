@@ -13,3 +13,17 @@ services:
       dockerfile: VitrineApi/Dockerfile
     ports:
       - 5001:8080
+    depends_on:
+      - sqlservervitrine
+  sqlservervitrine:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - SA_PASSWORD=MotDePasse!
+      - ACCEPT_EULA=Y
+    ports:
+      - "5002:1433" #Server=localhost,5002;User Id=sa;Password=MotDePasse!;Encrypt=false;
+    volumes:
+      - sqlservervitrine_data:/var/opt/mssql
+volumes:
+  sqlservervitrine_data:
+      
