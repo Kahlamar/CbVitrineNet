@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35728.132 d17.12
+VisualStudioVersion = 17.12.35728.132
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CbVitrineNet", "CbVitrineNet\CbVitrineNet.csproj", "{11C25CF3-35F8-4FD3-97E3-B90556F2B9E1}"
 EndProject
@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "�
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VitrineApi", "VitrineApi\VitrineApi.csproj", "{A8417999-0EB3-405A-9EDE-69FED7E1C1BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,10 @@ Global
 		{11C25CF3-35F8-4FD3-97E3-B90556F2B9E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11C25CF3-35F8-4FD3-97E3-B90556F2B9E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11C25CF3-35F8-4FD3-97E3-B90556F2B9E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8417999-0EB3-405A-9EDE-69FED7E1C1BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8417999-0EB3-405A-9EDE-69FED7E1C1BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8417999-0EB3-405A-9EDE-69FED7E1C1BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8417999-0EB3-405A-9EDE-69FED7E1C1BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

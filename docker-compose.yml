@@ -6,3 +6,10 @@ services:
       dockerfile: CbVitrineNet/Dockerfile
     ports:
       - 5000:8080
+  vitrineapi:
+    container_name: vitrineapi
+    build:
+      context: .
+      dockerfile: VitrineApi/Dockerfile
+    ports:
+      - 5001:8080
