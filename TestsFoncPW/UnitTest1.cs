@@ -1,4 +1,4 @@
-namespace TestsFonctionnels
+namespace TestsFoncPW
 {
     [Parallelizable(ParallelScope.Self)]
     [TestFixture]
