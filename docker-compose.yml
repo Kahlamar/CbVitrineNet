@@ -1,5 +1,6 @@
 # ConnectionString SSMS
-#Server=localhost,5002;User Id=sa;Password=MotDePasse!;Encrypt=false;
+# Server=localhost,5002;User Id=sa;Password=MotDePasse!;Encrypt=false;
+# Admin123456!
 
 volumes:
   sqlservervitrine_data:
