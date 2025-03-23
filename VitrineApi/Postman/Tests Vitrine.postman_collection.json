@@ -1,0 +1,24 @@
+{
+	"info": {
+		"_postman_id": "a8e60979-82ea-4135-bcbb-61771fed7ba5",
+		"name": "Tests Vitrine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31154169"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LocalhostAPI}}",
+					"host": [
+						"{{LocalhostAPI}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

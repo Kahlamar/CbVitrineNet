@@ -1,16 +1,21 @@
-namespace TestsUnitaires
-{
-    public class Tests
-    {
-        [SetUp]
-        public void Setup()
-        {
-        }
+namespace TestsUnitaires;
 
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
-        }
+public class Tests
+{
+    [SetUp]
+    public void Setup()
+    {
+    }
+
+    [Test]
+    public void Test1()
+    {
+        Assert.Pass();
+    }
+
+    [Test]
+    public void Test2()
+    {
+        Assert.Fail();
     }
 }
