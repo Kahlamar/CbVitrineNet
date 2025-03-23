@@ -1,4 +1,5 @@
 using CbVitrineNet.Components;
+using Radzen;
 
 namespace CbVitrineNet
 {
@@ -9,8 +10,13 @@ namespace CbVitrineNet
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddRazorComponents();
-
+            builder.Services.AddRazorComponents().AddInteractiveServerComponents();
+            builder.Services.AddRadzenComponents();
+            builder.Services.AddScoped<ContextMenuService>();
+            builder.Services.AddScoped<TooltipService>();
+            builder.Services.AddScoped<NotificationService>();
+            builder.Services.AddScoped<DialogService>();
+            builder.Services.AddScoped<HttpClient>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -22,7 +28,7 @@ namespace CbVitrineNet
             app.UseStaticFiles();
             app.UseAntiforgery();
 
-            app.MapRazorComponents<App>();
+            app.MapRazorComponents<App>().AddInteractiveServerRenderMode();
 
             app.Run();
         }
