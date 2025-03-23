@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VitrineApi", "VitrineApi\VitrineApi.csproj", "{A8417999-0EB3-405A-9EDE-69FED7E1C1BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsFoncVitrine", "TestsFonctionnels\TestsFoncVitrine.csproj", "{6023714B-997E-4BA8-9625-1B35F3B1ED1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,8 +28,15 @@ Global
 		{A8417999-0EB3-405A-9EDE-69FED7E1C1BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8417999-0EB3-405A-9EDE-69FED7E1C1BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8417999-0EB3-405A-9EDE-69FED7E1C1BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6023714B-997E-4BA8-9625-1B35F3B1ED1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6023714B-997E-4BA8-9625-1B35F3B1ED1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6023714B-997E-4BA8-9625-1B35F3B1ED1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6023714B-997E-4BA8-9625-1B35F3B1ED1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {421FEBC1-6B41-4892-A4AC-8A7B55CB9B65}
 	EndGlobalSection
 EndGlobal

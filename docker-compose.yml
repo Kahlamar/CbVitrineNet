@@ -1,3 +1,6 @@
+volumes:
+  sqlservervitrine_data:
+
 services:
   cbvitrinenet:
     container_name: cbvitrinenet
@@ -6,6 +9,9 @@ services:
       dockerfile: CbVitrineNet/Dockerfile
     ports:
       - 5000:8080
+    depends_on:
+      - vitrineapi
+      - sqlservervitrine
   vitrineapi:
     container_name: vitrineapi
     build:
@@ -24,6 +30,3 @@ services:
       - "5002:1433" #Server=localhost,5002;User Id=sa;Password=MotDePasse!;Encrypt=false;
     volumes:
       - sqlservervitrine_data:/var/opt/mssql
-volumes:
-  sqlservervitrine_data:
-      
