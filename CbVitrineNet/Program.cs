@@ -17,7 +17,6 @@ namespace CbVitrineNet
             builder.Services.AddScoped<DialogService>();
             builder.Services.AddScoped<HttpClient>();
 
-
             var app = builder.Build();
             app.UseStaticFiles();
             app.UseAntiforgery();

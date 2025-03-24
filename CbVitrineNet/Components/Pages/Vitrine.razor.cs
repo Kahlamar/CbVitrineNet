@@ -7,7 +7,7 @@ public partial class Vitrine
     [Inject]
     public required HttpClient Http { get; set; }
 
-    private List<string> testList;
+    private List<string>? testList;
 
     public async Task<List<string>> GetTestStrings(string url)
     {
