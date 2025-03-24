@@ -1,5 +1,6 @@
 using VitrineApi.Services.Interfaces;
 using VitrineApi.Services;
+using StackExchange.Redis;
 
 namespace VitrineApi
 {
@@ -11,6 +12,7 @@ namespace VitrineApi
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddScoped<IVitrineService, VitrineService>();
+            builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("redis:6379"));
 
             var app = builder.Build();
             app.MapControllers();
