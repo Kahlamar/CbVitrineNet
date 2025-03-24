@@ -2,4 +2,14 @@
 
 <h1 class="text-danger">Toto</h1>
 
-<RadzenButton Click="@ButtonClicked" Text="Hi"></RadzenButton>
+<ul>
+    @if (testList is not null)
+    {
+        @foreach (var item in testList)
+        {
+            <li>
+                @item
+            </li>
+        }
+    }
+</ul>
