@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using VitrineApi.Services;
 
 namespace VitrineApi.Controllers;
 
@@ -7,6 +8,10 @@ namespace VitrineApi.Controllers;
 [ApiController]
 public class TestController : ControllerBase
 {
+    private readonly VitrineService _vitrineService;
+
+
+
     [HttpGet("test")]
     public async Task<IActionResult> TestAsync()
     {
@@ -23,7 +28,6 @@ public class TestController : ControllerBase
                     result.Add(reader.GetString(0));
                 }
             }
-
         }
         return Ok(result);
     }

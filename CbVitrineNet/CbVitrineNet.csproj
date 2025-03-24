@@ -10,4 +10,8 @@
     <PackageReference Include="Radzen.Blazor" Version="6.3.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VitrineApi\VitrineApi.csproj" />
+  </ItemGroup>
+
 </Project>
