@@ -2,14 +2,18 @@
 
 <h1 class="text-danger">Toto</h1>
 
-<ul>
-    @if (testList is not null)
-    {
+@if (testList is not null)
+{
+    <ul>
         @foreach (var item in testList)
         {
             <li>
                 @item
             </li>
         }
-    }
-</ul>
+    </ul>
+}
+else
+{
+    <p>erreur !</p>
+}
