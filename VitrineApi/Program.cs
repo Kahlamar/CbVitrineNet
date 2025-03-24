@@ -1,3 +1,5 @@
+using VitrineApi.Services.Interfaces;
+using VitrineApi.Services;
 
 namespace VitrineApi
 {
@@ -8,6 +10,7 @@ namespace VitrineApi
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddScoped<IVitrineService, VitrineService>();
 
             var app = builder.Build();
             app.MapControllers();

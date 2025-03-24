@@ -1,5 +1,6 @@
 # ConnectionString SSMS
-# Server=localhost,5002;User Id=sa;Password=MotDePasse!;Encrypt=false;
+# Server=localhost,5002;User Id=sa;Password=MotDePasse!;Encrypt=false; pour se connecter a SQL Server a partir de l'hote
+# Server=sqlservervitrine,1433;Database=Vitrine;User Id=sa;Password=MotDePasse!;Encrypt=False;pour requeter la BDD a partir d'un container
 # Admin123456!
 
 volumes:
@@ -36,7 +37,7 @@ services:
       - SA_PASSWORD=MotDePasse!
       - ACCEPT_EULA=Y
     ports:
-      - "5002:1433" #Server=localhost,5002;User Id=sa;Password=MotDePasse!;Encrypt=false;
+      - 5002:1433
     volumes:
       - sqlservervitrine_data:/var/opt/mssql
   sonarqube:
@@ -52,7 +53,7 @@ services:
       - sonarqube_extensions:/opt/sonarqube/extensions
       - sonarqube_logs:/opt/sonarqube/logs
     ports:
-      - "9000:9000"
+      - 9000:9000
   db:
     image: postgres:12
     environment:
