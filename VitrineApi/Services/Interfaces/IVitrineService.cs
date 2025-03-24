@@ -1,4 +1,5 @@
-﻿namespace VitrineApi.Services.Interfaces;
+﻿
+namespace VitrineApi.Services.Interfaces;
 
 public interface IVitrineService
 {

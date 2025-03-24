@@ -1,12 +1,11 @@
 using Microsoft.AspNetCore.Components;
-using static System.Net.WebRequestMethods;
 
 namespace CbVitrineNet.Components.Pages;
 
 public partial class Vitrine
 {
     [Inject]
-    public new HttpClient Http { get; set; }
+    public required HttpClient Http { get; set; }
 
     private List<string> testList;
 
@@ -28,7 +27,7 @@ public partial class Vitrine
         }
         catch (Exception ex)
         {
-            Console.WriteLine("Erreur !");
+            Console.WriteLine("Erreur ! " + ex);
         }
     }
 }
