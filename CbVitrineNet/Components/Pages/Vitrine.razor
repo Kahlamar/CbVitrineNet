@@ -1,27 +1,24 @@
 ﻿@page "/"
 
-<h1 class="text-danger">Toto</h1>
+<PageTitle>Cyril Brun</PageTitle>
 
-@if (testList is not null)
-{
-    <ul>
-        @foreach (var item in testList)
-        {
-            <li>
-                @item
-            </li>
-        }
-    </ul>
-}
-else
-{
-    <p>erreur !</p>
-}
+<RadzenImage Path="images/Photo.jpg" Style="width: 15rem; height:15rem;" />
+
+
+<h2>Coordonnées de contact sur le CV</h2>
+<h2>Références sur demande</h2>
+
 
 <RadzenTabs TabPosition="TabPosition.Top" RenderMode="TabRenderMode.Client">
     <Tabs>
         <RadzenTabsItem Text="CV">
-            <p>CV</p>
+            <RadzenCard title="Expériences">
+                <RadzenStack Orientation="Orientation.Vertical" JustifyContent="JustifyContent.Start" Gap="1rem" class="rz-p-4">
+                    <RadzenText TextStyle="TextStyle.Body1">Infotel Conseil</RadzenText>
+                    <RadzenText TextStyle="TextStyle.Body1">BPCE-IT</RadzenText>
+                    <RadzenText TextStyle="TextStyle.Body1">Autodidacte</RadzenText>
+                </RadzenStack>
+            </RadzenCard>
         </RadzenTabsItem>
 
         <RadzenTabsItem Text="Développeur">
@@ -38,6 +35,10 @@ else
 
         <RadzenTabsItem Text="Agile">
             <p>Agile</p>
+        </RadzenTabsItem>
+
+        <RadzenTabsItem Text="Détails solution actuelle .Net">
+            <p>Bla bla</p>
         </RadzenTabsItem>
     </Tabs>
 </RadzenTabs>
