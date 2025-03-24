@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
 using StackExchange.Redis;
-using VitrineApi.Services;
 using VitrineApi.Services.Interfaces;
 
 namespace VitrineApi.Controllers;
