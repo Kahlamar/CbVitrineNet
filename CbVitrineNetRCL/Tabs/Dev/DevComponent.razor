@@ -4,13 +4,15 @@
 @using CbVitrineNetRCL.Tabs.Dev.Net.Frontend
 @using CbVitrineNetRCL.Tabs.Dev.Node.Backend
 @using CbVitrineNetRCL.Tabs.Dev.Node.Frontend
+@using CbVitrineNetRCL.Tabs.Dev.OtherDatabases
 @using CbVitrineNetRCL.Tabs.Dev.Python.Backend
+@using CbVitrineNetRCL.Tabs.Dev.Python.Scripting
 
 <h1>Les informations de cette page sont stockées sur MongoDB</h1>
 
 <h2>.Net</h2>
 
-<h3>Frontend</h3>
+<h3>Frontend & Client lourd</h3>
 
 <NetFrontComponent />
 
@@ -24,7 +26,7 @@
 
 <h2>Autres Moteurs de Base De Données</h2>
 
-<p>Mongo, Graph...</p>
+<OtherDatabasesComponent />
 
 <h2>Node</h2>
 
@@ -41,6 +43,10 @@
 <h3>Backend</h3>
 
 <PythonBackComponent />
+
+<h3>Scripting</h3>
+
+<PythonScriptingComponent />
 
 <h2>C++</h2>
 

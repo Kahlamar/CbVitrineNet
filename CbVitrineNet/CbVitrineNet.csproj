@@ -18,6 +18,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Include="..\CbVitrineNetRCL\Tabs\Dev\Net\Frontend\Component.razor" Link="Component.razor" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <ProjectReference Include="..\CbVitrineNetRCL\CbVitrineNetRCL.csproj" />
 	</ItemGroup>
 
