@@ -1,4 +1,4 @@
-namespace CbVitrineNet.Components.Tabs.CV;
+namespace CbVitrineNetRCL.Tabs.CV;
 
 public partial class CVComponent
 {

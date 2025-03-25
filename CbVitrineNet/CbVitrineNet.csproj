@@ -15,7 +15,6 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\VitrineApi\VitrineApi.csproj" />
-		<ProjectReference Include="..\VitrineRazorClassLibrary\VitrineRazorClassLibrary.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

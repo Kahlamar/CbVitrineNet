@@ -1,4 +1,4 @@
-namespace CbVitrineNet.Components.Tabs.DevOps;
+namespace CbVitrineNetRCL.Tabs.DevOps;
 
 public partial class DevOpsComponent
 {

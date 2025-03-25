@@ -1,4 +1,4 @@
-namespace CbVitrineNet.Components.Tabs.Agile;
+namespace CbVitrineNetRCL.Tabs.Agile;
 
 public partial class AgileComponent
 {

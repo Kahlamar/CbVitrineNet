@@ -1,4 +1,4 @@
-namespace CbVitrineNet.Components.Tabs.Detail;
+namespace CbVitrineNetRCL.Tabs.Detail;
 
 public partial class DetailComponent
 {
