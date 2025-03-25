@@ -14,11 +14,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\VitrineApi\VitrineApi.csproj" />
+	  <Folder Include="wwwroot\images\" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="wwwroot\images\" />
+	  <ProjectReference Include="..\CbVitrineNetRCL\CbVitrineNetRCL.csproj" />
 	</ItemGroup>
 
 </Project>

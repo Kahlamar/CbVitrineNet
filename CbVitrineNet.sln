@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsBDD", "TestsBDD\TestsB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsUnitaires", "TestsUnitaires\TestsUnitaires.csproj", "{B21FFE67-3BEE-4D1F-AFF1-EA489EBD5F5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CbVitrineNetRCL", "CbVitrineNetRCL\CbVitrineNetRCL.csproj", "{C4436FE6-0F4B-41A1-834B-238B58B148A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{B21FFE67-3BEE-4D1F-AFF1-EA489EBD5F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B21FFE67-3BEE-4D1F-AFF1-EA489EBD5F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B21FFE67-3BEE-4D1F-AFF1-EA489EBD5F5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4436FE6-0F4B-41A1-834B-238B58B148A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4436FE6-0F4B-41A1-834B-238B58B148A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4436FE6-0F4B-41A1-834B-238B58B148A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4436FE6-0F4B-41A1-834B-238B58B148A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
