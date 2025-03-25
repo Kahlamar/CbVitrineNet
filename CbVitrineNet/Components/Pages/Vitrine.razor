@@ -1,9 +1,14 @@
 ﻿@page "/"
+@using CbVitrineNet.Components.Tabs.Agile
 @using CbVitrineNet.Components.Tabs.CV
+@using CbVitrineNet.Components.Tabs.Detail
+@using CbVitrineNet.Components.Tabs.Dev
+@using CbVitrineNet.Components.Tabs.DevOps
+@using CbVitrineNet.Components.Tabs.Testing
 
 <PageTitle>Cyril Brun</PageTitle>
 
-<RadzenImage Path="images/Photo.jpg" Style="width: 15rem; height:15rem;" />
+<RadzenImage Path="images/Photo.jpg" Style="width: 10rem; height:10rem;" />
 
 
 <h2>Coordonnées de contact sur le CV</h2>
@@ -17,23 +22,23 @@
         </RadzenTabsItem>
 
         <RadzenTabsItem Text="Développeur">
-            <p>Dev</p>
+            <DevComponent />
         </RadzenTabsItem>
 
         <RadzenTabsItem Text="Testeur">
-            <p>Test</p>
+            <TestingComponent />
         </RadzenTabsItem>
 
         <RadzenTabsItem Text="DevOps">
-            <p>DevOps</p>
+            <DevOpsComponent />
         </RadzenTabsItem>
 
         <RadzenTabsItem Text="Agile">
-            <p>Agile</p>
+            <AgileComponent />
         </RadzenTabsItem>
 
         <RadzenTabsItem Text="Détails solution actuelle .Net">
-            <p>Bla bla</p>
+            <DetailComponent />
         </RadzenTabsItem>
     </Tabs>
 </RadzenTabs>

@@ -18,11 +18,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Components\Tabs\Dev\" />
-	  <Folder Include="Components\Tabs\Agile\" />
-	  <Folder Include="Components\Tabs\Detail\" />
-	  <Folder Include="Components\Tabs\DevOps\" />
-	  <Folder Include="Components\Tabs\Testing\" />
 	  <Folder Include="wwwroot\images\" />
 	</ItemGroup>
 
