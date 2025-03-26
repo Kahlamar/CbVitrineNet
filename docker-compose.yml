@@ -10,6 +10,7 @@ volumes:
   sonarqube_logs:
   postgresql:
   postgresql_data:
+  mongo_data:
 
 services:
   cbvitrinenet:
@@ -67,3 +68,13 @@ services:
     container_name: redis
     ports:
       - 6379:6379
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
