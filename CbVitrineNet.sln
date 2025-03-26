@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsUnitaires", "TestsUnit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CbVitrineNetRCL", "CbVitrineNetRCL\CbVitrineNetRCL.csproj", "{C4436FE6-0F4B-41A1-834B-238B58B148A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CbVitrineNetClasses", "CbVitrineNetClasses\CbVitrineNetClasses.csproj", "{89FB4400-36DB-4F95-8779-DFEB7E1084CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{C4436FE6-0F4B-41A1-834B-238B58B148A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4436FE6-0F4B-41A1-834B-238B58B148A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4436FE6-0F4B-41A1-834B-238B58B148A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89FB4400-36DB-4F95-8779-DFEB7E1084CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89FB4400-36DB-4F95-8779-DFEB7E1084CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89FB4400-36DB-4F95-8779-DFEB7E1084CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89FB4400-36DB-4F95-8779-DFEB7E1084CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,7 +4,7 @@ using StackExchange.Redis;
 
 namespace VitrineApi
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
@@ -13,6 +13,7 @@ namespace VitrineApi
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddScoped<IVitrineService, VitrineService>();
             builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("redis:6379"));
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             var app = builder.Build();
             app.MapControllers();
