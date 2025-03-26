@@ -15,13 +15,12 @@ namespace VitrineApi
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddScoped<IVitrineService, VitrineService>();
             builder.Services.AddScoped<ICvService, CvService>();
-            //builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("redis:6379"));
+            builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("redis:6379"));
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             builder.Services.AddSingleton<IMongoClient>(sp =>
             {
-                // Récupération de la chaîne de connexion depuis la configuration
-                // Par défaut, on se connecte à mongodb://localhost:27017 si aucune configuration n'est définie
-                var connectionString = builder.Configuration.GetValue<string>("mongodb://root:example@localhost/") ?? "mongodb://root:example@localhost/";
+                var connectionString = builder.Configuration.GetValue<string>("mongodb://root:example@mongodb/")
+                ?? "mongodb://root:example@mongodb/";
                 return new MongoClient(connectionString);
             });
 
