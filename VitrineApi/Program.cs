@@ -23,6 +23,7 @@ namespace VitrineApi
                 ?? "mongodb://root:example@mongodb/";
                 return new MongoClient(connectionString);
             });
+            builder.Services.AddGraphQLServer();
 
             var app = builder.Build();
             app.MapControllers();
