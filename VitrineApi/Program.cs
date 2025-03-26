@@ -1,6 +1,7 @@
 using VitrineApi.Services.Interfaces;
 using VitrineApi.Services;
 using StackExchange.Redis;
+using VitrineApi.Services.CV;
 
 namespace VitrineApi
 {
@@ -12,6 +13,7 @@ namespace VitrineApi
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddScoped<IVitrineService, VitrineService>();
+            builder.Services.AddScoped<ICvService, CvService>();
             builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("redis:6379"));
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

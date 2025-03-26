@@ -6,7 +6,8 @@ namespace VitrineApi.Controllers;
 
 [Route("api")]
 [ApiController]
-public class TestController(IVitrineService vitrineService, IConnectionMultiplexer redis) : ControllerBase
+public class TestController(IVitrineService vitrineService,
+                            IConnectionMultiplexer redis) : ControllerBase
 {
     private readonly IVitrineService _vitrineService = vitrineService;
     private readonly IConnectionMultiplexer _redis = redis;

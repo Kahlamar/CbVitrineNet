@@ -4,5 +4,5 @@ namespace VitrineApi.Services.Interfaces;
 
 public interface ICvService
 {
-    Task<IAsyncEnumerable<Experience>> GetExperiencesAsync();
+    Task<List<Experience>> GetExperiencesAsync();
 }
