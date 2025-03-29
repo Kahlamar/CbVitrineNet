@@ -36,11 +36,6 @@ public class MongoController(IMongoClient mongo) : ControllerBase
         BsonDocument result = await _mongo.RunCommandAsync<BsonDocument>(command); // Exécution de la commande
 
 
-
-
-
-
-
         await collection.InsertOneAsync(new BsonDocument {
             { "success", "Or not ?" }
         });

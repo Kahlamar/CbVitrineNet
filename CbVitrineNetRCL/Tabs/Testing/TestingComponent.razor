@@ -34,75 +34,80 @@
 
 </RadzenStack>
 
-<RadzenStack Orientation="Orientation.Vertical" class="rz-mx-auto rz-my-12">
-    <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>User Story</b></RadzenText>
+@if (userStory is not null)
+{
+    <RadzenStack Orientation="Orientation.Vertical" class="rz-mx-auto rz-my-12">
+        <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>User Story</b></RadzenText>
 
-    <RadzenCard class="rz-mx-auto">
-        <table class="table table-striped-columns">
-            <thead>
-                <tr>
-                    <th scope="col">Nom de l'US</th>
-                    <th scope="col">Risque</th>
-                    <th scope="col">Priorité</th>
-                    <th scope="col">Environnement</th>
-                    <th scope="col">Branche à utiliser</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Sign In Utilisateur</td>
-                    <td>Faible</td>
-                    <td>Haute</td>
-                    <td>Chrome, Safari, Edge</td>
-                    <td>form-signin</td>
-                </tr>
-            </tbody>
-        </table>
+        <RadzenCard class="rz-mx-auto">
+            <table class="table table-striped-columns">
+                <thead>
+                    <tr>
+                        <th scope="col">Nom de l'US</th>
+                        <th scope="col">Risque</th>
+                        <th scope="col">Priorité</th>
+                        <th scope="col">Environnement</th>
+                        <th scope="col">Branche à utiliser</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@userStory.NomUs</td>
+                        <td>@userStory.Risque</td>
+                        <td>@userStory.Priorite</td>
+                        <td>@userStory.Environnement</td>
+                        <td>@userStory.Branche</td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <p>Détail de l'US ici du front au back</p>
+            <p>@userStory.DescriptionDetaillee</p>
 
 
-        <RadzenText TextStyle="TextStyle.Body1" class="rz-my-6"><b>Test Case Valide</b></RadzenText>
+            <RadzenText TextStyle="TextStyle.Body1" class="rz-my-6"><b>Test Case Valide</b></RadzenText>
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Id Test Case</th>
-                    <th scope="col">Prérequis</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td scope="row">1</td>
-                    <td scope="row">L'utilisateur souhaitant s'authentifier doit avoir une adresse mail ainsi qu'un "état civil".</td>
-                </tr>
-            </tbody>
-        </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id Test Case</th>
+                        <th scope="col">Prérequis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">@userStory.TestCaseValide._id</td>
+                        <td scope="row">@userStory.TestCaseValide.Prerequis</td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Numéro Étape</th>
-                    <th scope="col">Action</th>
-                    <th scope="col">Résultat attendu</th>
-                    <th scope="col">Résultat obtenu</th>
-                    <th scope="col">Pass/Fail</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td scope="row">1.1</td>
-                    <td>Aller sur la page de sign in</td>
-                    <td>La page de sign in s'Affiche avec le formulaire remplissable.</td>
-                    <td>La page de sign in est bien affichée avec le formulaire remplissable.</td>
-                    <td>Pass</td>
-                </tr>
-            </tbody>
-        </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Numéro Étape</th>
+                        <th scope="col">Action</th>
+                        <th scope="col">Résultat attendu</th>
+                        <th scope="col">Résultat obtenu</th>
+                        <th scope="col">Pass/Fail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        @foreach (var etapeTestCase in userStory.TestCaseValide.EtapesTestCase)
+                        {
+                            <td>@etapeTestCase._id</td>
+                            <td>@etapeTestCase.Action</td>
+                            <td>@etapeTestCase.ResultatAttendu</td>
+                            <td>@etapeTestCase.ResultatObtenu</td>
+                            <td>@etapeTestCase.PassFail</td>
+                        }
+                    </tr>
+                </tbody>
+            </table>
 
-    </RadzenCard>
-</RadzenStack>
-
+        </RadzenCard>
+    </RadzenStack>
+}
 <RadzenStack Orientation="Orientation.Vertical" class="rz-mx-auto rz-my-12">
     <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>Test Fonctionnel Test Case Valide</b></RadzenText>
 
