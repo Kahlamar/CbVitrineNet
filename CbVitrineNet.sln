@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "�
 		docker-compose.yml = docker-compose.yml
 		Doxyfile = Doxyfile
 		Doxygen.txt = Doxygen.txt
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VitrineApi", "VitrineApi\VitrineApi.csproj", "{A8417999-0EB3-405A-9EDE-69FED7E1C1BB}"

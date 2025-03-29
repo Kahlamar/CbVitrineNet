@@ -5,7 +5,7 @@ namespace TestsFoncPW
     public class Tests : PageTest
     {
         [Test]
-        public async Task HomepageHasPlaywrightInTitleAndGetStartedLinkLinkingtoTheIntroPage()
+        public async Task TestFonctionnelTestCaseValideId1()
         {
             await Page.GotoAsync("https://playwright.dev");
 
