@@ -2,10 +2,10 @@
 
 public class ExperienceDto
 {
-    public required DateTime DateDebut { get; set; }
-    public required DateTime DateFin { get; set; }
-    public required string Poste { get; set; }
-    public required string Entreprise { get; set; }
-    public required string Emplacement { get; set; }
-    public required string Description { get; set; }
+    public DateTime DateDebut { get; set; }
+    public DateTime DateFin { get; set; }
+    public string Poste { get; set; }
+    public string Entreprise { get; set; }
+    public string Emplacement { get; set; }
+    public List<string> TachesEffectuees { get; set; }
 }

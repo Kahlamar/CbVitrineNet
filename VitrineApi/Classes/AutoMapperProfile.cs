@@ -10,5 +10,11 @@ public class AutoMapperProfile : Profile
     {
         CreateMap<Experience, ExperienceDto>();
         CreateMap<ExperienceDto, Experience>();
+
+        CreateMap<Formation, FormationDto>();
+        CreateMap<FormationDto, Formation>();
+
+        CreateMap<Certification, CertificationDto>();
+        CreateMap<CertificationDto, Certification>();
     }
 }
