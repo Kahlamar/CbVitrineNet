@@ -7,15 +7,16 @@
 @using CbVitrineNetRCL.Tabs.DevOps
 @using CbVitrineNetRCL.Tabs.Testing
 
-
 <PageTitle>Cyril Brun</PageTitle>
 
-<RadzenImage Path="images/Photo.jpg" Style="width: 10rem; height:10rem;" />
+<RadzenImage Path="images/Photo.jpg" class="rz-mb-2" Style="width: 10rem; height:10rem; border-radius:50%;" />
 
-<h2>Coordonnées de contact sur le CV</h2>
-<h2>Références sur demande</h2>
+<div class="rz-my-12">
+    <h2>Coordonnées de contact sur le CV</h2>
+    <h2>Références sur demande</h2>
+</div>
 
-<RadzenTabs TabPosition="TabPosition.Top" RenderMode="TabRenderMode.Client">
+<RadzenTabs TabPosition="TabPosition.Left" RenderMode="TabRenderMode.Client">
     <Tabs>
         <RadzenTabsItem Text="CV">
             <CVComponent />
@@ -31,10 +32,6 @@
 
         <RadzenTabsItem Text="DevOps">
             <DevOpsComponent />
-        </RadzenTabsItem>
-
-        <RadzenTabsItem Text="Agile">
-            <AgileComponent />
         </RadzenTabsItem>
 
         <RadzenTabsItem Text="Détails solution .Net actuelle">

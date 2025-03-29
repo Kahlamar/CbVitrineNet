@@ -20,4 +20,8 @@
 		<Folder Include="Postman\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\CbVitrineNetClasses\CbVitrineNetClasses.csproj" />
+	</ItemGroup>
+
 </Project>
