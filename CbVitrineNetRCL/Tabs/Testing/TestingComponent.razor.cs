@@ -1,7 +1,6 @@
 using CbVitrineNetClasses.Testing;
 using Microsoft.AspNetCore.Components;
-using System.Net.Http.Json;
-
+using Newtonsoft.Json;
 namespace CbVitrineNetRCL.Tabs.Testing;
 
 public partial class TestingComponent
@@ -16,8 +15,9 @@ public partial class TestingComponent
     {
         try
         {
+            var jsonResponse = await Http.GetStringAsync("http://vitrineapi:8080/api/testing/user-story");
+            userStory = JsonConvert.DeserializeObject<UserStory>(jsonResponse);
 
-            userStory = await Http.GetFromJsonAsync<UserStory>("http://vitrineapi:8080/api/testing/user-story");
         }
         catch (Exception ex)
         {
