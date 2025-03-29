@@ -21,7 +21,7 @@ namespace VitrineApi
             {
                 // Récupération de la chaîne de connexion depuis la configuration
                 // Par défaut, on se connecte à mongodb://localhost:27017 si aucune configuration n'est définie
-                var connectionString = builder.Configuration.GetValue<string>("mongodb://root:example@localhost/") ?? "mongodb://root:example@localhost/";
+                var connectionString = builder.Configuration.GetValue<string>("mongodb://root:example@mongodb/") ?? "mongodb://root:example@mongodb/";
                 return new MongoClient(connectionString);
             });
 
@@ -32,3 +32,11 @@ namespace VitrineApi
         }
     }
 }
+
+// TODO: Corriger la connectionString ligne 24 de program.cs de l'api
+// TODO: Écrire TDD dans l'onglet Testeur
+// TODO: Faire un middleware d'Expo
+// TODO: Remplkacer les h1 des onglets par du texte grossi
+
+
+

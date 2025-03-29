@@ -1,5 +1,140 @@
 ﻿<h1>Les informations de cette page sont stockées sur MongoDB</h1>
 
-<h1>Ne pas oublier d'écrire TDD dans le testing</h1>
-<h1>Faire des middlewares avec le cours Udemy .Net</h1>
+<RadzenStack Orientation="Orientation.Vertical" class="rz-mx-auto rz-mt-12">
+    <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>Exemple de formulaire à tester</b></RadzenText>
+
+    <RadzenButton ButtonType="ButtonType.Submit" Text="Remplir avec des données valides" class="rz-mx-auto bg-primary"></RadzenButton>
+    <RadzenButton ButtonType="ButtonType.Submit" Text="Remplir avec des données invalides" class="rz-mx-auto bg-danger"></RadzenButton>
+
+    <RadzenCard class="rz-mx-auto">
+        <RadzenFormField Text="Nom" Style="width: 100%;">
+            <RadzenTextBox Placeholder="Jean" />
+        </RadzenFormField>
+
+        <RadzenFormField Text="Prénom" Style="width: 100%;">
+            <RadzenTextBox Placeholder="Dupont" />
+        </RadzenFormField>
+
+        <RadzenFormField Text="Email" Style="width: 100%;">
+            <RadzenTextBox Name="Email" />
+            <RadzenEmailValidator Component="Email" Text="Provide a valid email address" />
+        </RadzenFormField>
+
+        <RadzenFormField Text="Mot de passe" Style="width: 100%;">
+            <RadzenPassword Placeholder="Mot de Passe" />
+        </RadzenFormField>
+
+        <RadzenFormField Text="Confirmation Mot de Passe" Style="width: 100%;">
+            <RadzenPassword Placeholder="Mot de Passe" />
+        </RadzenFormField>
+
+
+    </RadzenCard>
+    <RadzenButton ButtonType="ButtonType.Submit" Text="Submit" class="rz-mx-auto"></RadzenButton>
+
+</RadzenStack>
+
+<RadzenStack Orientation="Orientation.Vertical" class="rz-mx-auto rz-my-12">
+    <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>User Story</b></RadzenText>
+
+    <RadzenCard class="rz-mx-auto">
+        <table class="table table-striped-columns">
+            <thead>
+                <tr>
+                    <th scope="col">Nom de l'US</th>
+                    <th scope="col">Risque</th>
+                    <th scope="col">Priorité</th>
+                    <th scope="col">Environnement</th>
+                    <th scope="col">Branche à utiliser</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sign In Utilisateur</td>
+                    <td>Faible</td>
+                    <td>Haute</td>
+                    <td>Chrome, Safari, Edge</td>
+                    <td>form-signin</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Détail de l'US ici du front au back</p>
+
+
+        <RadzenText TextStyle="TextStyle.Body1" class="rz-my-6"><b>Test Case Valide</b></RadzenText>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id Test Case</th>
+                    <th scope="col">Prérequis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">1</td>
+                    <td scope="row">L'utilisateur souhaitant s'authentifier doit avoir une adresse mail ainsi qu'un "état civil".</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Numéro Étape</th>
+                    <th scope="col">Action</th>
+                    <th scope="col">Résultat attendu</th>
+                    <th scope="col">Résultat obtenu</th>
+                    <th scope="col">Pass/Fail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">1.1</td>
+                    <td>Aller sur la page de sign in</td>
+                    <td>La page de sign in s'Affiche avec le formulaire remplissable.</td>
+                    <td>La page de sign in est bien affichée avec le formulaire remplissable.</td>
+                    <td>Pass</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </RadzenCard>
+</RadzenStack>
+
+<RadzenStack Orientation="Orientation.Vertical" class="rz-mx-auto rz-my-12">
+    <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>Test Fonctionnel Test Case Valide</b></RadzenText>
+
+    <RadzenCard class="rz-mx-auto">
+        <p>mettre ici le code playwright</p>
+    </RadzenCard>
+</RadzenStack>
+
+<RadzenStack Orientation="Orientation.Vertical" class="rz-mx-auto rz-my-12">
+    <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>Test Unitaire insertion en base</b></RadzenText>
+
+    <RadzenCard class="rz-mx-auto">
+        <p>mettre ici le test unitaire</p>
+    </RadzenCard>
+</RadzenStack>
+
+
+<RadzenStack Orientation="Orientation.Vertical" class="rz-mx-auto rz-my-12">
+    <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>Tests API avec Postman et fichier http</b></RadzenText>
+
+    <RadzenCard class="rz-mx-auto">
+        <p>mettre ici la partie Réseau</p>
+    </RadzenCard>
+</RadzenStack>
+
+
+<RadzenStack Orientation="Orientation.Vertical" class="rz-mx-auto rz-my-12">
+    <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>Sonarqube</b></RadzenText>
+
+    <RadzenCard class="rz-mx-auto">
+        <p>mettre ici la partie Sonarqube</p>
+    </RadzenCard>
+</RadzenStack>
+
 
