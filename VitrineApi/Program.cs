@@ -3,6 +3,11 @@ using VitrineApi.Services;
 using VitrineApi.Services.CV;
 using MongoDB.Driver;
 using CbVitrineNetClasses.Testing;
+using Microsoft.Data.SqlClient;
+using SharpCompress.Common;
+using System.Text.RegularExpressions;
+using MongoDB.Driver.Core.Configuration;
+using System.Data;
 
 namespace VitrineApi;
 
@@ -19,10 +24,7 @@ public static class Program
         builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         builder.Services.AddSingleton<IMongoClient>(sp =>
         {
-            // Récupération de la chaîne de connexion depuis la configuration
-            // Par défaut, on se connecte à mongodb://localhost:27017 si aucune configuration n'est définie
-            var connectionString = builder.Configuration.GetValue<string>("mongodb://root:example@mongodb/") ?? "mongodb://root:example@mongodb/";
-            return new MongoClient(connectionString);
+            return new MongoClient("mongodb://root:example@mongodb/");
         });
 
         SeedMongoDb();
@@ -79,13 +81,12 @@ public static class Program
             return;
         }
     }
+
 }
 
 
-// TODO: Corriger la connectionString ligne 24 de program.cs de l'api
 // TODO: Écrire TDD dans l'onglet Testeur
 // TODO: Faire un middleware d'Expo
-// TODO: Remplacer les h1 des onglets par du texte grossi
 
 
 

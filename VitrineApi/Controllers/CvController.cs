@@ -11,12 +11,12 @@ namespace VitrineApi.Controllers;
 [ApiController]
 public class CvController(IMapper mapper, ICvService cvService) : ControllerBase
 {
-    private readonly IMapper _mapper = mapper;
-    private readonly ICvService _cvService = cvService;
+    //private readonly IMapper _mapper = mapper;
+    //private readonly ICvService _cvService = cvService;
 
-    [HttpGet("experiences")]
-    public async Task<List<ExperienceDto>> GetExperiencesAsync()
-    {
-        return _mapper.Map<List<ExperienceDto>>(await _cvService.GetExperiencesAsync());
-    }
+    //[HttpGet("experiences")]
+    //public async Task<List<ExperienceDto>> GetExperiencesAsync()
+    //{
+    //    return _mapper.Map<List<ExperienceDto>>(await _cvService.GetExperiencesAsync());
+    //}
 }
