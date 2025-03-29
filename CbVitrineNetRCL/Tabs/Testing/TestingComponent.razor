@@ -1,4 +1,4 @@
-﻿<h1>Les informations de cette page sont stockées sur MongoDB</h1>
+﻿<RadzenText TextStyle="TextStyle.Body1" class="fs-6"><b>User Story stockée sur MongoDb</b></RadzenText>
 
 <RadzenStack Orientation="Orientation.Vertical" class="rz-mx-auto rz-mt-12">
     <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>Exemple de formulaire à tester</b></RadzenText>
@@ -92,16 +92,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        @foreach (var etapeTestCase in userStory.TestCaseValide.EtapesTestCase)
-                        {
+                    @foreach (var etapeTestCase in userStory.TestCaseValide.EtapesTestCase)
+                    {
+                        <tr>
                             <td>@etapeTestCase._id</td>
                             <td>@etapeTestCase.Action</td>
                             <td>@etapeTestCase.ResultatAttendu</td>
                             <td>@etapeTestCase.ResultatObtenu</td>
                             <td>@etapeTestCase.PassFail</td>
-                        }
-                    </tr>
+                        </tr>
+                    }
                 </tbody>
             </table>
 

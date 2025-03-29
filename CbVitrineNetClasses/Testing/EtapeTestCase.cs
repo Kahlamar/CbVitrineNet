@@ -21,21 +21,21 @@ public class EtapeTestCase
         PassFail = passFail;
     }
 
-    [JsonProperty("_id")]
+    [JsonProperty(nameof(_id))]
     public object _id { get; set; }
 
-    [JsonProperty("Numero")]
+    [JsonProperty(nameof(Numero))]
     public string Numero { get; set; }
 
-    [JsonProperty("Action")]
+    [JsonProperty(nameof(Action))]
     public string Action { get; set; }
 
-    [JsonProperty("ResultatAttendu")]
+    [JsonProperty(nameof(ResultatAttendu))]
     public string ResultatAttendu { get; set; }
 
-    [JsonProperty("ResultatObtenu")]
+    [JsonProperty(nameof(ResultatObtenu))]
     public string ResultatObtenu { get; set; }
 
-    [JsonProperty("PassFail")]
+    [JsonProperty(nameof(PassFail))]
     public string PassFail { get; set; }
 }

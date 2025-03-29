@@ -13,12 +13,12 @@ public class TestCase
         _id = "1";
     }
 
-    [JsonProperty("_id")]
+    [JsonProperty(nameof(_id))]
     public object _id { get; set; }
 
-    [JsonProperty("Prerequis")]
+    [JsonProperty(nameof(Prerequis))]
     public string Prerequis { get; set; }
 
-    [JsonProperty("EtapesTestCase")]
+    [JsonProperty(nameof(EtapesTestCase))]
     public List<EtapeTestCase> EtapesTestCase { get; set; }
 }

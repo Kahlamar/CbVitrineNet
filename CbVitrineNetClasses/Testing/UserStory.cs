@@ -23,24 +23,24 @@ public class UserStory
         TestCaseValide = testCase;
     }
 
-    [JsonProperty("NomUs")]
+    [JsonProperty(nameof(NomUs))]
     public string NomUs { get; set; }
 
-    [JsonProperty("Risque")]
+    [JsonProperty(nameof(Risque))]
     public string Risque { get; set; }
 
-    [JsonProperty("Priorite")]
+    [JsonProperty(nameof(Priorite))]
     public string Priorite { get; set; }
 
-    [JsonProperty("Environnement")]
+    [JsonProperty(nameof(Environnement))]
     public string Environnement { get; set; }
 
-    [JsonProperty("Branche")]
+    [JsonProperty(nameof(Branche))]
     public string Branche { get; set; }
 
-    [JsonProperty("DescriptionDetaillee")]
+    [JsonProperty(nameof(DescriptionDetaillee))]
     public string DescriptionDetaillee { get; set; }
 
-    [JsonProperty("TestCaseValide")]
+    [JsonProperty(nameof(TestCaseValide))]
     public TestCase TestCaseValide { get; set; }
 }

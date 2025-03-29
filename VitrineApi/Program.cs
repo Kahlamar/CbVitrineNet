@@ -65,8 +65,8 @@ public static class Program
                                           etapesTestCaseValides);
 
             UserStory usToInsert = new("Sign In Utilisateur",
-                                       "faible",
-                                       "haute",
+                                       "Faible",
+                                       "Haute",
                                        "Chrome, Edge, Safari",
                                        "form-signin",
                                        "description détaillée",
