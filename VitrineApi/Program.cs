@@ -73,17 +73,17 @@ public static class Program
             userStoriesCollection.InsertOne(usToInsert);
 
             List<Experience> experiences = [
-                new("exp-1", "2022-10-01", "2024-10-01", "Développeur Informatique", "Infotel Conseil", "Aix-En-Provence", [ new(""), new("")]),
-                new("exp-2", "2020-10-01", "2022-10-01", "Développeur Informatique", "BPCE-IT", "Aix-En-Provence", [ new(""), new("")]),
-                new("exp-3", "2020-10-01", "2022-10-01", "Fondateur", "SAS Dealz", "Martigues", [ new(""), new("")])
+                new("exp-1", "2022-10-01", "2024-10-01", "Développeur Informatique", "Infotel Conseil", "Aix-En-Provence", [ new("1"), new("2")]),
+                new("exp-2", "2020-10-01", "2022-10-01", "Développeur Informatique", "BPCE-IT", "Aix-En-Provence", [ new("1"), new("2")]),
+                new("exp-3", "2020-10-01", "2022-10-01", "Fondateur", "SAS Dealz", "Martigues", [ new("1"), new("2")])
                 ];
             IMongoCollection<Experience> experiencesCollection = vitrineNetBdd.GetCollection<Experience>("Experiences");
             experiencesCollection.InsertMany(experiences);
 
             List<Formation> formations = [
-                new("for-1", "2022-10-01", "2024-10-01", "Manager en architecture et applications logicielles des systèmes d'information", "CESI", "Aix-En-Provence","Bac +5",[ new(""), new("")]),
-                new("for-2", "2020-10-01", "2022-10-01", "Développeur Informatique", "CESI", "Aix-En-Provence","Bac +2",[ new(""), new("")]),
-                new("for-3", "2013-09-01", "2016-07-01", "Bachelor In Business Administration spé Banque/Finance", "Kedge Business School", "Marseille","Bac +3",[ new(""), new("")])
+                new("for-1", "2022-10-01", "2024-10-01", "Manager en architecture et applications logicielles des systèmes d'information", "CESI", "Aix-En-Provence","Bac +5", [ new("1"), new("2")]),
+                new("for-2", "2020-10-01", "2022-10-01", "Développeur Informatique", "CESI", "Aix-En-Provence","Bac +2", [ new("1"), new("2")]),
+                new("for-3", "2013-09-01", "2016-07-01", "Bachelor In Business Administration spé Banque/Finance", "Kedge Business School", "Marseille","Bac +3", [ new("1"), new("2")])
                 ];
             IMongoCollection<Formation> formationsCollection = vitrineNetBdd.GetCollection<Formation>("Formations");
             formationsCollection.InsertMany(formations);

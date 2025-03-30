@@ -3,40 +3,23 @@
         <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>Expériences</b></RadzenText>
         @if (experiences is not null)
         {
-            <p>OK</p>
+            @foreach (var exp in experiences)
+            {
+                <RadzenCard class="rz-background-color-primary-light rz-shadow-0 rz-border-radius-0 rz-p-8 rz-mx-auto" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
+                    <RadzenText TextStyle="TextStyle.Body1" class="fs-4 rz-color-on-primary-light"><b>@exp.Entreprise @exp.DateDebut.Split("-")[0] / @exp.DateFin.Split("-")[0]</b></RadzenText>
+                    <RadzenText TextStyle="TextStyle.Body1" class="fs-4 rz-color-on-primary-light"><b>@exp.Poste</b></RadzenText>
+                    <RadzenText TextStyle="TextStyle.H6" class="rz-color-on-primary-light"><strong>Tâches effectuées</strong></RadzenText>
+                    <RadzenRow RowGap="0">
+                        <RadzenColumn SizeSM="12">
+                            @foreach (var tache in exp.TachesEffectuees)
+                            {
+                                <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">@tache</RadzenText>
+                            }
+                        </RadzenColumn>
+                    </RadzenRow>
+                </RadzenCard>
+            }
         }
-
-
-
-
-        <RadzenCard class="rz-background-color-primary-light rz-shadow-0 rz-border-radius-0 rz-p-8 rz-mx-auto" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
-            <RadzenText TextStyle="TextStyle.Body1" class="fs-4 rz-color-on-primary-light"><b>Infotel Conseil 2022-2024</b></RadzenText>
-            <RadzenText TextStyle="TextStyle.Body1" class="fs-4 rz-color-on-primary-light"><b>Développeur Informatique en alternance</b></RadzenText>
-            <RadzenText TextStyle="TextStyle.H6" class="rz-color-on-primary-light"><strong>Travaux effectués</strong></RadzenText>
-            <RadzenRow RowGap="0">
-                <RadzenColumn SizeSM="12">
-                    <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Développement solution .Net (Blazor/ASP/Entity Framework/SQL Server)</RadzenText>
-                    <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Modélisations Schémas BDD SQL Server et architecture logicielle</RadzenText>
-                    <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Conceptions et exécutions des tests unitaires avec MSTest</RadzenText>
-                    <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Travail d'équipe, meetings agile et rédactions documentations</RadzenText>
-                </RadzenColumn>
-            </RadzenRow>
-        </RadzenCard>
-
-        <RadzenCard class="rz-background-color-primary-light rz-shadow-0 rz-border-radius-0 rz-p-8 rz-mx-auto" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
-            <RadzenText TextStyle="TextStyle.Body1" class="fs-4 rz-color-on-primary-light"><b>BPCE-IT 2020-2022</b></RadzenText>
-            <RadzenText TextStyle="TextStyle.Body1" class="fs-4 rz-color-on-primary-light"><b>Développeur Informatique en alternance</b></RadzenText>
-            <RadzenText TextStyle="TextStyle.H6" class="rz-color-on-primary-light"><strong>Travaux effectués</strong></RadzenText>
-            <RadzenRow RowGap="0">
-                <RadzenColumn SizeSM="12">
-                    <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Développement de solutions web destinées aux postes de travail BPCE-IT</RadzenText>
-                    <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Réalisation application complète .Net (Blazor/ASP/SQL Server)</RadzenText>
-                    <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Assistance Expert Système pour un outil interne avec WPF</RadzenText>
-                    <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Conceptions et exécutions de tests unitaires avec MSTest</RadzenText>
-                    <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Travail d'équipe, meetings agile et rédactions documentations</RadzenText>
-                </RadzenColumn>
-            </RadzenRow>
-        </RadzenCard>
     </RadzenCardGroup>
 </RadzenStack>
 

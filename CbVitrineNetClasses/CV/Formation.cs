@@ -46,6 +46,6 @@ public class Formation
     public string NiveauAtteint { get; set; }
 
     [JsonProperty(nameof(Cours))]
-    List<string> Cours { get; set; }
+    public List<string> Cours { get; set; }
 
 }
