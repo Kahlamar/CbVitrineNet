@@ -1,4 +1,16 @@
-﻿@using Radzen.Blazor.Markdown;
+<h2>Détails de la solution .Net actuelle</h2>
 
-<RadzenMarkdown class="rz-p-0 rz-p-md-12 rz-markdown" AutoLinkHeadingDepth=4 Text="Faire un fichier Md et le parser ici" />
+<ul class="list-group">
+    <li class="list-group-item">La solution actuelle est volontairement diversifiée en termes de technologies afin de monter en compétences sur de nouveaux éléments comme par exemple l'intégration du moteur de base de données MongoDB.</li>
+    <li class="list-group-item">J'ai respecté les conventions de nommage et les ai réduit le nombre de warning au minimum hors mot de passe visible pour l'accès au container.</li>
+    <li class="list-group-item">J'ai aussi appliqué le Pattern DTO au début des développements, néanmoins je me suis finalement rabattu sur du "full Mongo" mais le code est toujours présent.</li>
+    <li class="list-group-item">L'architecture de la solution est éparse afin de faciliter l'organisation. Ainsi les composants Blazor tout comme les classes ont leurs propres librairies qui n'empiètent pas sur le projet Blazor.</li>
+    <li class="list-group-item">L'application complète est containerisée pour faciliter l'utilisation et pour monter en compétences.</li>
+    <li class="list-group-item">Les tests fonctionnels avec Playwright doivent être lancés lorsque l'application est containerisée.</li>
+    <li class="list-group-item">Sonarqube est installé dans un container dédié ce qui m'a permit d'évaluer la qualité de la solution. Voir le README.md pour les commandes d'analyses.</li>
+    <li class="list-group-item">Les commentaires de la documentation sont utilisés par Doxygen pour générer la documentation (voir le Doxyfile pour les paramètres).</li>
+    <li class="list-group-item">Le fichier http fournit par ASP est utilisé pour requêter sur MongoDB mais aussi pour monter en compétences car je ne connaissais pas ce système.</li>
+    <li class="list-group-item">La collection Postman est disponbile dans le dossier Postman du projet de l'API.</li>
+</ul>
+
 

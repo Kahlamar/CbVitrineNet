@@ -1,9 +1,9 @@
 <RadzenStack Orientation="Orientation.Horizontal">
     <RadzenCardGroup>
         <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>Formations</b></RadzenText>
-        @if (certifications is not null)
+        @if (Certifications is not null)
         {
-            @foreach (var certification in certifications)
+            @foreach (var certification in Certifications)
             {
                 <RadzenCard class="my-4 mx-4 rz-border-radius-2">
                     <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Start" Gap="1rem" class="rz-p-4">
