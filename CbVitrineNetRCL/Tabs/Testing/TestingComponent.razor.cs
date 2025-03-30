@@ -1,4 +1,4 @@
-﻿using CbVitrineNetClasses.Testing;
+using CbVitrineNetClasses.Testing;
 using Microsoft.AspNetCore.Components;
 using Newtonsoft.Json;
 
@@ -11,7 +11,6 @@ public partial class TestingComponent
     public required HttpClient Http { get; set; }
 
     UserStory? UserStory { get; set; }
-
 
     protected override async Task OnInitializedAsync()
     {
