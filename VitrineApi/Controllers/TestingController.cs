@@ -1,29 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
-using MongoDB.Driver;
+using VitrineApi.Services.Interfaces;
 
 namespace VitrineApi.Controllers;
 
 
 [ApiController]
 [Route("api/testing")]
-public class TestingController(IMongoClient mongoClient) : ControllerBase
+public class TestingController(ITestingService testingService) : ControllerBase
 {
-    private readonly IMongoDatabase _mongoClient = mongoClient.GetDatabase("VitrineNet");
-
+    private readonly ITestingService _testingService = testingService;
 
     [HttpGet("user-story")]
     public async Task<ActionResult> GetUserStory()
     {
-        IMongoCollection<BsonDocument> collection = _mongoClient.GetCollection<BsonDocument>("UserStories");
-        var projection = Builders<BsonDocument>.Projection.Exclude("_id");
-        BsonDocument userStory = await collection.Find(new BsonDocument()).Project(projection).FirstOrDefaultAsync();
-
-        if (userStory == null)
-        {
-            return NotFound("Aucun document trouvé");
-        }
-
-        return Ok(userStory.ToJson());
+        var result = await _testingService.GetUserStoryAsync();
+        return Ok(result.ToJson());
     }
 }

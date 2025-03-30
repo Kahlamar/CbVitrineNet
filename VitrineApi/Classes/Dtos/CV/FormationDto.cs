@@ -2,12 +2,12 @@
 {
     public class FormationDto
     {
-        public DateTime DateDebut { get; set; }
-        public DateTime DateFin { get; set; }
-        public string Titre { get; set; }
-        public string Organisme { get; set; }
-        public string Emplacement { get; set; }
-        public string NiveauAtteint { get; set; }
-        List<string> Cours { get; set; }
+        public string? DateDebut { get; set; }
+        public string? DateFin { get; set; }
+        public string? Titre { get; set; }
+        public string? Organisme { get; set; }
+        public string? Emplacement { get; set; }
+        public string? NiveauAtteint { get; set; }
+        public List<string>? Cours { get; set; }
     }
 }

@@ -2,8 +2,8 @@
 {
     public class CertificationDto
     {
-        public string Titre { get; set; }
-        public string OrganismeCertifiant { get; set; }
-        public string DureeValiditeAnnees { get; set; }
+        public string? Titre { get; set; }
+        public string? OrganismeCertifiant { get; set; }
+        public string? DureeValiditeAnnees { get; set; }
     }
 }

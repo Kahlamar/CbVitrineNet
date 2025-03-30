@@ -8,16 +8,16 @@ namespace CbVitrineNetRCL.Tabs.Testing;
 public partial class TestingComponent
 {
     [Inject]
-    public new HttpClient Http { get; set; }
+    public required HttpClient Http { get; set; }
 
-    UserStory userStory { get; set; }
+    UserStory? UserStory { get; set; }
 
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
-            userStory = JsonConvert.DeserializeObject<UserStory>(await Http.GetStringAsync("http://vitrineapi:8080/api/testing/user-story"));
+            UserStory = JsonConvert.DeserializeObject<UserStory>(await Http.GetStringAsync("http://vitrineapi:8080/api/testing/user-story"));
         }
         catch (Exception ex)
         {

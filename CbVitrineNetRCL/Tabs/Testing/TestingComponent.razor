@@ -34,7 +34,7 @@
 
 </RadzenStack>
 
-@if (userStory is not null)
+@if (UserStory is not null)
 {
     <RadzenStack Orientation="Orientation.Vertical" class="rz-mx-auto rz-my-12">
         <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>User Story</b></RadzenText>
@@ -52,16 +52,16 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>@userStory.NomUs</td>
-                        <td>@userStory.Risque</td>
-                        <td>@userStory.Priorite</td>
-                        <td>@userStory.Environnement</td>
-                        <td>@userStory.Branche</td>
+                        <td>@UserStory.NomUs</td>
+                        <td>@UserStory.Risque</td>
+                        <td>@UserStory.Priorite</td>
+                        <td>@UserStory.Environnement</td>
+                        <td>@UserStory.Branche</td>
                     </tr>
                 </tbody>
             </table>
 
-            <p>@userStory.DescriptionDetaillee</p>
+            <p>@UserStory.DescriptionDetaillee</p>
 
 
             <RadzenText TextStyle="TextStyle.Body1" class="rz-my-6"><b>Test Case Valide</b></RadzenText>
@@ -75,8 +75,8 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td scope="row">@userStory.TestCaseValide._id</td>
-                        <td scope="row">@userStory.TestCaseValide.Prerequis</td>
+                        <td scope="row">@UserStory.TestCaseValide._id</td>
+                        <td scope="row">@UserStory.TestCaseValide.Prerequis</td>
                     </tr>
                 </tbody>
             </table>
@@ -92,7 +92,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var etapeTestCase in userStory.TestCaseValide.EtapesTestCase)
+                    @foreach (var etapeTestCase in UserStory.TestCaseValide.EtapesTestCase)
                     {
                         <tr>
                             <td>@etapeTestCase._id</td>

@@ -1,8 +1,8 @@
 ﻿<RadzenCard title="Formations">
     <RadzenStack Orientation="Orientation.Vertical" JustifyContent="JustifyContent.Start" Gap="1rem" class="rz-p-4">
-        @if (formations is not null)
+        @if (Formations is not null)
         {
-            @foreach (var formation in formations)
+            @foreach (var formation in Formations)
             {
                 <RadzenCard class="rz-background-color-primary-light rz-shadow-0 rz-border-radius-0 rz-p-8 rz-mx-auto" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
                     <RadzenText TextStyle="TextStyle.Body1" class="fs-4 rz-color-on-primary-light"><b>@formation.Organisme @formation.DateDebut.Split("-")[0] / @formation.DateFin.Split("-")[0]</b></RadzenText>

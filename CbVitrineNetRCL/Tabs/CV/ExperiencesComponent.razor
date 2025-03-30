@@ -1,9 +1,9 @@
 ﻿<RadzenStack Orientation="Orientation.Horizontal">
     <RadzenCardGroup>
         <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>Expériences</b></RadzenText>
-        @if (experiences is not null)
+        @if (Experiences is not null)
         {
-            @foreach (var exp in experiences)
+            @foreach (var exp in Experiences)
             {
                 <RadzenCard class="rz-background-color-primary-light rz-shadow-0 rz-border-radius-0 rz-p-8 rz-mx-auto" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
                     <RadzenText TextStyle="TextStyle.Body1" class="fs-4 rz-color-on-primary-light"><b>@exp.Entreprise @exp.DateDebut.Split("-")[0] / @exp.DateFin.Split("-")[0]</b></RadzenText>

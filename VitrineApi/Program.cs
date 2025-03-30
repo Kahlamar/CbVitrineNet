@@ -1,9 +1,9 @@
-﻿using VitrineApi.Services.Interfaces;
-using VitrineApi.Services;
-using VitrineApi.Services.CV;
-using MongoDB.Driver;
+﻿using CbVitrineNetClasses.CV;
 using CbVitrineNetClasses.Testing;
-using CbVitrineNetClasses.CV;
+using MongoDB.Driver;
+using VitrineApi.Services.CV;
+using VitrineApi.Services.Interfaces;
+using VitrineApi.Services.Testing;
 
 namespace VitrineApi;
 
@@ -14,8 +14,8 @@ public static class Program
         var builder = WebApplication.CreateBuilder(args);
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddScoped<IVitrineService, VitrineService>();
         builder.Services.AddScoped<ICvService, CvService>();
+        builder.Services.AddScoped<ITestingService, TestingService>();
         //builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("redis:6379"));
         builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         builder.Services.AddSingleton<IMongoClient>(sp =>
@@ -31,7 +31,7 @@ public static class Program
         app.Run();
     }
 
-    private static void SeedMongoDb()
+    public static void SeedMongoDb()
     {
         MongoClient mongoClient = new("mongodb://root:example@mongodb/");
 
@@ -101,8 +101,3 @@ public static class Program
         }
     }
 }
-
-// TODO: Faire un middleware d'Expo
-
-
-

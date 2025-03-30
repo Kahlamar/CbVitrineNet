@@ -1,36 +1,33 @@
-﻿using Microsoft.Data.SqlClient;
-using VitrineApi.Classes.CV;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
 using VitrineApi.Services.Interfaces;
 
 namespace VitrineApi.Services.CV;
 
-public class CvService : ICvService
+public class CvService(IMongoClient mongoClient) : ICvService
 {
-    //public async Task<List<Experience>> GetExperiencesAsync()
-    //{
-    //    string connectionString = "Server=sqlservervitrine,1433;Database=Vitrine;User Id=sa;Password=MotDePasse!;Encrypt=False;";
-    //    List<Experience> experiences = [];
-    //    using (var connection = new SqlConnection(connectionString))
-    //    {
-    //        await connection.OpenAsync();
-    //        var cmd = new SqlCommand("SELECT * FROM Experiences;", connection);
-    //        using (var reader = await cmd.ExecuteReaderAsync())
-    //        {
-    //            while (await reader.ReadAsync())
-    //            {
-    //                experiences.Add(new Experience
-    //                {
-    //                    IdExperience = reader.GetInt32(0),
-    //                    DateDebut = reader.GetDateTime(1),
-    //                    DateFin = reader.GetDateTime(2),
-    //                    Poste = reader.GetString(3),
-    //                    Entreprise = reader.GetString(4),
-    //                    Emplacement = reader.GetString(5),
+    private readonly IMongoDatabase _mongoClient = mongoClient.GetDatabase("VitrineNet");
 
-    //                });
-    //            }
-    //        }
-    //    }
-    //    return experiences;
-    //}
+    public async Task<List<BsonDocument>> GetAllExperiencesAsync()
+    {
+        IMongoCollection<BsonDocument> collection = _mongoClient.GetCollection<BsonDocument>("Experiences");
+        var projection = Builders<BsonDocument>.Projection.Exclude("_id");
+        return await collection.Find(new BsonDocument()).Project(projection).ToListAsync();
+    }
+
+    public async Task<List<BsonDocument>> GetAllFormationsAsync()
+    {
+        IMongoCollection<BsonDocument> collection = _mongoClient.GetCollection<BsonDocument>("Formations");
+        var projection = Builders<BsonDocument>.Projection.Exclude("_id");
+        return await collection.Find(new BsonDocument()).Project(projection).ToListAsync();
+    }
+
+    public async Task<List<BsonDocument>> GetAllCertificationsAsync()
+    {
+        IMongoCollection<BsonDocument> collection = _mongoClient.GetCollection<BsonDocument>("Certifications");
+        var projection = Builders<BsonDocument>.Projection.Exclude("_id");
+        return await collection.Find(new BsonDocument()).Project(projection).ToListAsync();
+    }
+
 }
+
