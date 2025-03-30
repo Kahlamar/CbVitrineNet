@@ -1,9 +1,4 @@
-# ConnectionString SSMS
-# Server=localhost,5002;User Id=sa;Password=MotDePasse!;Encrypt=false;
-# Server=sqlservervitrine,1433;Database=Vitrine;User Id=sa;Password=MotDePasse!;Encrypt=False;
-# Admin123456!
-
-volumes:
+﻿volumes:
   sqlservervitrine_data:
   sonarqube_data:
   sonarqube_extensions:
