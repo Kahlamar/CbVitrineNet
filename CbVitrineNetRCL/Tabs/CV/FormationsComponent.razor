@@ -1,25 +1,30 @@
-﻿<RadzenCard title="Formations">
-    <RadzenStack Orientation="Orientation.Vertical" JustifyContent="JustifyContent.Start" Gap="1rem" class="rz-p-4">
+<RadzenStack Orientation="Orientation.Horizontal">
+    <RadzenCardGroup>
+        <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>Formations</b></RadzenText>
         @if (Formations is not null)
         {
             @foreach (var formation in Formations)
             {
-                <RadzenCard class="rz-background-color-primary-light rz-shadow-0 rz-border-radius-0 rz-p-8 rz-mx-auto" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
-                    <RadzenText TextStyle="TextStyle.Body1" class="fs-4 rz-color-on-primary-light"><b>@formation.Organisme @formation.DateDebut.Split("-")[0] / @formation.DateFin.Split("-")[0]</b></RadzenText>
-                    <RadzenText TextStyle="TextStyle.Body1" class="fs-4 rz-color-on-primary-light"><b>@formation.Titre</b></RadzenText>
-                    <RadzenText TextStyle="TextStyle.H6" class="rz-color-on-primary-light"><strong>Cours</strong></RadzenText>
-                    <RadzenRow RowGap="0">
-                        <RadzenColumn SizeSM="12">
-
-                            @foreach (var cour in formation.Cours)
-                            {
-                                <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">@cour</RadzenText>
-                            }
-                        </RadzenColumn>
-                    </RadzenRow>
+                <RadzenCard class="my-4 mx-4 rz-border-radius-2">
+                    <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Start" Gap="1rem" class="rz-p-4">
+                        <RadzenStack Gap="0">
+                            <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>@formation.Organisme @formation.DateDebut.Split("-")[0] - @formation.DateFin.Split("-")[0]</b></RadzenText>
+                            <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>@formation.Titre</b></RadzenText>
+                        </RadzenStack>
+                    </RadzenStack>
+                    <RadzenCard class="rz-background-color-primary-light rz-shadow-0 rz-border-radius-0 rz-p-8" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
+                        <RadzenText TextStyle="TextStyle.H6" class="rz-color-on-primary-light"><strong>Tâches effectuées</strong></RadzenText>
+                        <RadzenRow RowGap="0">
+                            <RadzenColumn SizeSM="8">
+                                @foreach (var cour in formation.Cours)
+                                {
+                                    <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">@cour</RadzenText>
+                                }
+                            </RadzenColumn>
+                        </RadzenRow>
+                    </RadzenCard>
                 </RadzenCard>
             }
         }
-    </RadzenStack>
-</RadzenCard>
-
+    </RadzenCardGroup>
+</RadzenStack>

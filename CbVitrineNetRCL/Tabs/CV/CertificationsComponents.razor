@@ -1,24 +1,29 @@
-<RadzenCard title="Certifications">
-    <RadzenStack Orientation="Orientation.Vertical" JustifyContent="JustifyContent.Start" Gap="1rem" class="rz-p-4">
+<RadzenStack Orientation="Orientation.Horizontal">
+    <RadzenCardGroup>
+        <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>Formations</b></RadzenText>
         @if (certifications is not null)
         {
             @foreach (var certification in certifications)
             {
-                <RadzenCard class="rz-background-color-primary-light rz-shadow-0 rz-border-radius-0 rz-p-8 rz-mx-auto" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
-                    <RadzenText TextStyle="TextStyle.Body1" class="fs-4 rz-color-on-primary-light"><b>@certification.OrganismeCertifiant</b></RadzenText>
-                    <RadzenText TextStyle="TextStyle.Body1" class="fs-4 rz-color-on-primary-light"><b>@certification.Titre</b></RadzenText>
-                    @if (certification.DureeValiditeAnnees == 100)
-                    {
-                        <RadzenText TextStyle="TextStyle.H6" class="rz-color-on-primary-light"><strong>Valide à vie</strong></RadzenText>
-                    }
-                    else
-                    {
-                        <RadzenText TextStyle="TextStyle.H6" class="rz-color-on-primary-light"><strong>Valide @certification.DureeValiditeAnnees ans</strong></RadzenText>
-                    }
-
+                <RadzenCard class="my-4 mx-4 rz-border-radius-2">
+                    <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Start" Gap="1rem" class="rz-p-4">
+                        <RadzenStack Gap="0">
+                            <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>@certification.OrganismeCertifiant</b></RadzenText>
+                            <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>@certification.Titre</b></RadzenText>
+                        </RadzenStack>
+                    </RadzenStack>
+                    <RadzenCard class="rz-background-color-primary-light rz-shadow-0 rz-border-radius-0 rz-p-8" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
+                        @if (certification.DureeValiditeAnnees == 100)
+                        {
+                            <RadzenText TextStyle="TextStyle.H6" class="rz-color-on-primary-light"><strong>Valide à vie</strong></RadzenText>
+                        }
+                        else
+                        {
+                            <RadzenText TextStyle="TextStyle.H6" class="rz-color-on-primary-light"><strong>Valide @certification.DureeValiditeAnnees ans</strong></RadzenText>
+                        }
+                    </RadzenCard>
                 </RadzenCard>
             }
         }
-    </RadzenStack>
-</RadzenCard>
-
+    </RadzenCardGroup>
+</RadzenStack>
