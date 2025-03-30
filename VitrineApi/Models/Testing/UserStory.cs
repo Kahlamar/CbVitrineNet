@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
 
-namespace VitrineApi.Models
+namespace VitrineApi.Models.Testing
 {
     public class UserStory
     {
@@ -32,7 +32,6 @@ namespace VitrineApi.Models
         public string Environnement { get; set; }
         public string Branche { get; set; }
         public string DescriptionDetaillee { get; set; }
-
         public TestCase TestCaseValide { get; set; }
     }
 }

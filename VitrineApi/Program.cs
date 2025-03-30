@@ -1,13 +1,9 @@
-using VitrineApi.Services.Interfaces;
+Ôªøusing VitrineApi.Services.Interfaces;
 using VitrineApi.Services;
 using VitrineApi.Services.CV;
 using MongoDB.Driver;
 using CbVitrineNetClasses.Testing;
-using Microsoft.Data.SqlClient;
-using SharpCompress.Common;
-using System.Text.RegularExpressions;
-using MongoDB.Driver.Core.Configuration;
-using System.Data;
+using CbVitrineNetClasses.CV;
 
 namespace VitrineApi;
 
@@ -31,7 +27,7 @@ public static class Program
 
         var app = builder.Build();
         app.MapControllers();
-        app.MapGet("/", () => "DÈmarrage Microservice OK");
+        app.MapGet("/", () => "D√©marrage Microservice OK");
         app.Run();
     }
 
@@ -52,18 +48,18 @@ public static class Program
                 new("1.1",
                     "Aller sur la page d'inscription",
                     "La page d'inscription s'affiche et le formulaire est remplissable",
-                    "La page d'inscription est bien affichÈe et le formulaire est bien remplissable",
+                    "La page d'inscription est bien affich√©e et le formulaire est bien remplissable",
                     "Pass",
                     "1.1.1"),
                 new ("1.2",
-                     "InsÈrer le prÈnom valide dans le textbox PrÈnom",
-                     "Le curseur est affichÈ dans le textbox et ce dernier est rempli avec le prÈnom valide",
-                     "Le textbox est bien rempli avec le prÈnom",
+                     "Ins√©rer le pr√©nom valide dans le textbox Pr√©nom",
+                     "Le curseur est affich√© dans le textbox et ce dernier est rempli avec le pr√©nom valide",
+                     "Le textbox est bien rempli avec le pr√©nom",
                      "Pass",
                      "1.1.2")
             ];
 
-            TestCase testCaseValide = new($"L'utilisateur souhaitant s'authentifier doit avoir une adresse mail ainsi qu'un Ètat civil.",
+            TestCase testCaseValide = new($"L'utilisateur souhaitant s'authentifier doit avoir une adresse mail ainsi qu'un √©tat civil.",
                                           etapesTestCaseValides);
 
             UserStory usToInsert = new("Sign In Utilisateur",
@@ -71,21 +67,41 @@ public static class Program
                                        "Haute",
                                        "Chrome, Edge, Safari",
                                        "form-signin",
-                                       "description dÈtaillÈe",
+                                       "description d√©taill√©e",
                                        testCaseValide);
 
             userStoriesCollection.InsertOne(usToInsert);
+
+            List<Experience> experiences = [
+                new("exp-1", "2022-10-01", "2024-10-01", "D√©veloppeur Informatique", "Infotel Conseil", "Aix-En-Provence", [ new(""), new("")]),
+                new("exp-2", "2020-10-01", "2022-10-01", "D√©veloppeur Informatique", "BPCE-IT", "Aix-En-Provence", [ new(""), new("")]),
+                new("exp-3", "2020-10-01", "2022-10-01", "Fondateur", "SAS Dealz", "Martigues", [ new(""), new("")])
+                ];
+            IMongoCollection<Experience> experiencesCollection = vitrineNetBdd.GetCollection<Experience>("Experiences");
+            experiencesCollection.InsertMany(experiences);
+
+            List<Formation> formations = [
+                new("for-1", "2022-10-01", "2024-10-01", "Manager en architecture et applications logicielles des syst√®mes d'information", "CESI", "Aix-En-Provence","Bac +5",[ new(""), new("")]),
+                new("for-2", "2020-10-01", "2022-10-01", "D√©veloppeur Informatique", "CESI", "Aix-En-Provence","Bac +2",[ new(""), new("")]),
+                new("for-3", "2013-09-01", "2016-07-01", "Bachelor In Business Administration sp√© Banque/Finance", "Kedge Business School", "Marseille","Bac +3",[ new(""), new("")])
+                ];
+            IMongoCollection<Formation> formationsCollection = vitrineNetBdd.GetCollection<Formation>("Formations");
+            formationsCollection.InsertMany(formations);
+
+            List<Certification> certifications = [
+                new("cert-ctfl-istqb", "Certified Tester Foundation Level", "ISTQB", 100),
+                new("cert-pcap-pi", "Python Certitified Associate Programmer", "Python Institute", 3),
+                new("cert-cap-ci", "C++ Certitified Associate Programmer", "C++ Institute", 3)];
+            IMongoCollection<Certification> certificationsCollection = vitrineNetBdd.GetCollection<Certification>("Certifications");
+            certificationsCollection.InsertMany(certifications);
         }
         else
         {
             return;
         }
     }
-
 }
 
-
-// TODO: …crire TDD dans l'onglet Testeur
 // TODO: Faire un middleware d'Expo
 
 

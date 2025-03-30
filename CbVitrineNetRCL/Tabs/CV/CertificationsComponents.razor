@@ -1,8 +1,9 @@
-<RadzenCard title="Certifications">
+﻿<RadzenCard title="Certifications">
     <RadzenStack Orientation="Orientation.Vertical" JustifyContent="JustifyContent.Start" Gap="1rem" class="rz-p-4">
-        <RadzenText TextStyle="TextStyle.Body1">Python</RadzenText>
-        <RadzenText TextStyle="TextStyle.Body1">CPP</RadzenText>
-        <RadzenText TextStyle="TextStyle.Body1">ISTQB</RadzenText>
+        @if (certifications is not null)
+        {
+            <p>OK</p>
+        }
     </RadzenStack>
 </RadzenCard>
 

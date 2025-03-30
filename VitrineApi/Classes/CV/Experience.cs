@@ -3,8 +3,8 @@
 public class Experience
 {
     public int IdExperience { get; set; }
-    public DateTime DateDebut { get; set; }
-    public DateTime DateFin { get; set; }
+    public string DateDebut { get; set; }
+    public string DateFin { get; set; }
     public string Poste { get; set; }
     public string Entreprise { get; set; }
     public string Emplacement { get; set; }

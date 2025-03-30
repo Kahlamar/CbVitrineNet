@@ -1,11 +1,11 @@
-﻿using Newtonsoft.Json;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
 
-namespace CbVitrineNetClasses.CV;
+namespace VitrineApi.Models.CV;
 
 public class Experience
 {
-    [JsonConstructor]
-    public Experience(object id,
+    public Experience(string? idExperience,
                       string dateDebut,
                       string dateFin,
                       string poste,
@@ -13,7 +13,7 @@ public class Experience
                       string emplacement,
                       List<string> tachesEffectuees)
     {
-        _id = id;
+        IdExperience = idExperience;
         DateDebut = dateDebut;
         DateFin = dateFin;
         Poste = poste;
@@ -22,24 +22,13 @@ public class Experience
         TachesEffectuees = tachesEffectuees;
     }
 
-    [JsonProperty(nameof(_id))]
-    public object _id { get; set; }
-
-    [JsonProperty(nameof(DateDebut))]
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string? IdExperience { get; set; }
     public string DateDebut { get; set; }
-
-    [JsonProperty(nameof(DateFin))]
     public string DateFin { get; set; }
-
-    [JsonProperty(nameof(Poste))]
     public string Poste { get; set; }
-
-    [JsonProperty(nameof(Entreprise))]
     public string Entreprise { get; set; }
-
-    [JsonProperty(nameof(Emplacement))]
     public string Emplacement { get; set; }
-
-    [JsonProperty(nameof(TachesEffectuees))]
     public List<string> TachesEffectuees { get; set; }
 }

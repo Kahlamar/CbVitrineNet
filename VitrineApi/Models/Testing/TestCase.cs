@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
 
-namespace VitrineApi.Models
+namespace VitrineApi.Models.Testing
 {
     public class TestCase
     {
