@@ -26,7 +26,7 @@ public static class Program
 
         var app = builder.Build();
         app.MapControllers();
-        app.MapGet("/", () => "Démarrage Microservice OK");
+        app.MapGet("/", () => "Démarrage API OK");
         app.Run();
     }
 

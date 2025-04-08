@@ -1,52 +1,6 @@
-### Définir l'environnement
-@baseUrl = http://localhost:3000/api
-@token = {{auth.response.body.access_token}}
+### DÃ©finir l'environnement
+@baseUrl = http://localhost:5001/api
 
-### Authentification (login)
-POST {{baseUrl}}/auth/login
-Content-Type: application/json
-
-{
-  "email": "admin@vitrine.com",
-  "password": "SuperMotDePasse"
-}
-
-> {% client.global.set("auth", response) %}
-
+### Formations
+GET {{baseUrl}}/cv/formations
 ###
-
-### Récupérer la liste des produits
-GET {{baseUrl}}/products
-Authorization: Bearer {{token}}
-
-###
-
-### Créer un produit
-POST {{baseUrl}}/products
-Authorization: Bearer {{token}}
-Content-Type: application/json
-
-{
-  "name": "Chaussures Turbo 3000",
-  "price": 149.99,
-  "description": "Les plus rapides du marché."
-}
-
-###
-
-### Récupérer un produit par ID (on va imaginer que l’ID = 123)
-GET {{baseUrl}}/products/123
-Authorization: Bearer {{token}}
-
-###
-
-### Créer une commande avec le produit 123
-POST {{baseUrl}}/orders
-Authorization: Bearer {{token}}
-Content-Type: application/json
-
-{
-  "productId": 123,
-  "quantity": 2,
-  "shippingAddress": "42, Avenue du Test, 75000 Paris"
-}

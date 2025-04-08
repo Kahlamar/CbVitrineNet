@@ -2,13 +2,13 @@
 
 <RadzenStack Orientation="Orientation.Vertical" class="rz-mx-auto rz-mt-12">
     <RadzenText TextStyle="TextStyle.Body1" class="fs-4"><b>Exemple de formulaire à tester</b></RadzenText>
-    <RadzenCard class="rz-mx-auto">
+    @*  <RadzenCard class="rz-mx-auto">
         <RadzenFormField Text="Nom" Style="width: 100%;">
-            <RadzenTextBox Placeholder="Jean" />
+            <RadzenTextBox Placeholder="Nom" />
         </RadzenFormField>
 
         <RadzenFormField Text="Prénom" Style="width: 100%;">
-            <RadzenTextBox Placeholder="Dupont" />
+            <RadzenTextBox Placeholder="Prénom" />
         </RadzenFormField>
 
         <RadzenFormField Text="Email" Style="width: 100%;">
@@ -21,13 +21,39 @@
         </RadzenFormField>
 
         <RadzenFormField Text="Confirmation Mot de Passe" Style="width: 100%;">
-            <RadzenPassword Placeholder="Mot de Passe" />
+            <RadzenPassword Placeholder="Mot de Passe Confirmation" />
         </RadzenFormField>
 
 
-    </RadzenCard>
-    <RadzenButton ButtonType="ButtonType.Submit" Text="Submit" class="rz-mx-auto"></RadzenButton>
+    </RadzenCard> *@
 
+    <form style="width: 100%; max-width: 500px;">
+        <div style="width: 100%; margin-bottom: 15px;">
+            <label for="nom">Nom</label><br>
+            <input type="text" id="nom" name="nom" placeholder="Nom" style="width: 100%; padding: 8px;" />
+        </div>
+
+        <div style="width: 100%; margin-bottom: 15px;">
+            <label for="prenom">Prénom</label><br>
+            <input type="text" id="prenom" name="prenom" placeholder="Prénom" style="width: 100%; padding: 8px;" />
+        </div>
+
+        <div style="width: 100%; margin-bottom: 15px;">
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" placeholder="Email" style="width: 100%; padding: 8px;" required />
+        </div>
+
+        <div style="width: 100%; margin-bottom: 15px;">
+            <label for="motdepasse">Mot de passe</label><br>
+            <input type="password" id="motdepasse" name="motdepasse" placeholder="Mot de Passe" style="width: 100%; padding: 8px;" />
+        </div>
+
+        <div style="width: 100%; margin-bottom: 15px;">
+            <label for="confirmationMotdepasse">Confirmation Mot de Passe</label><br>
+            <input type="password" id="confirmationMotdepasse" name="confirmationMotdepasse" placeholder="Mot de Passe Confirmation" style="width: 100%; padding: 8px;" />
+        </div>
+        <RadzenButton ButtonType="ButtonType.Submit" Text="Submit" class="rz-mx-auto"></RadzenButton>
+    </form>
 </RadzenStack>
 
 @if (UserStory is not null)

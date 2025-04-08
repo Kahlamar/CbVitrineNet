@@ -1,24 +1,95 @@
 {
-	"info": {
-		"_postman_id": "a8e60979-82ea-4135-bcbb-61771fed7ba5",
-		"name": "Tests Vitrine",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "31154169"
-	},
-	"item": [
-		{
-			"name": "New Request",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{LocalhostAPI}}",
-					"host": [
-						"{{LocalhostAPI}}"
-					]
-				}
-			},
-			"response": []
-		}
-	]
+  "info": {
+    "_postman_id": "a8e60979-82ea-4135-bcbb-61771fed7ba5",
+    "name": "Tests Vitrine",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31154169"
+  },
+  "item": [
+    {
+      "name": "Test API",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TestMongo Experiences",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/cv/experiences",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "cv",
+            "experiences"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TestMongo Formations",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/cv/formations",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "cv",
+            "formations"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "TestMongo Certifs",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/cv/certifications",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5001",
+          "path": [
+            "api",
+            "cv",
+            "certifications"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
 }

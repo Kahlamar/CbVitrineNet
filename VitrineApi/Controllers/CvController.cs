@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using VitrineApi.Classes.Dtos.CV;
 using VitrineApi.Classes.CV;
