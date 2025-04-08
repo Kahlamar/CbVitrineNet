@@ -14,7 +14,7 @@ Vous trouverez dans la solution ici présente plusieurs projets:
 ## Lancement
 
 La lancement de la solution requiert l'installation de Docker desktop. [Lien téléchargement](https://www.docker.com/products/docker-desktop/)
-:a commande suivante doit être utilisée à la racine de la solution:
+La commande suivante doit être utilisée à la racine de la solution:
 ```
 docker compose up [--build]
 ```
@@ -76,14 +76,14 @@ ENTRYPOINT ["dotnet", "VitrineApi.dll"]
 ## Documentation
 
 J'ai utilisé l'utilitaire [Doxygen](http://doxygen.nl/index.html) pour la génération de documentations.
-Par convention, les commentaires démarrant par **\\\** sont les points d'entrées pour l'analyse Doxygen.
+Par convention, les commentaires démarrant par /// sont les points d'entrées pour l'analyse Doxygen.
 
 Le logiciel [Doxywizard](https://www.doxygen.nl/download.html) est le générateur de documentation.
 Vous trouverez à la racine de la solution le fichier **Doxyfile** contenant les paramètres pour l'analyse (notamment l'ISO-8859-1 pour la prise en charge des accents)
 
 Si vous voulez générer la documentation, suivez les étapes suivantes:
 1. Ouvrez le **Doxywizard**
-2. Fournissez le Doxyfile présent à la racine du projet ce qui remplira les param;tres
+2. Fournissez le Doxyfile présent à la racine du projet ce qui remplira les paramètres
 3. Fournissez le path de la racine de la solution (Source code directory)
 4. Fournissez aussi le path de destination (Destination directory)
 5. Cliquez sur l'onglet **Run** puis sur **Run doxygen**. Cela lancera l'analyse et générera la documentation en HTML navigable.  
