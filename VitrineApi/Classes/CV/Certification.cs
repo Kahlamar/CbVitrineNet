@@ -1,10 +1,27 @@
-﻿namespace VitrineApi.Classes.CV
+namespace VitrineApi.Classes.CV;
+
+/// <summary>
+/// Classe Certification (SQL Server)
+/// </summary>
+public class Certification
 {
-    public class Certification
-    {
-        public int IdCertification { get; set; }
-        public string? Titre { get; set; }
-        public string? OrganismeCertifiant { get; set; }
-        public string? DureeValiditeAnnees { get; set; }
-    }
+    /// <summary>
+    /// Id de la Certification
+    /// </summary>
+    public int IdCertification { get; set; }
+
+    /// <summary>
+    /// Titre de la certification
+    /// </summary>
+    public string? Titre { get; set; }
+
+    /// <summary>
+    /// Organisme certifiant
+    /// </summary>
+    public string? OrganismeCertifiant { get; set; }
+
+    /// <summary>
+    /// Durée de validité en années
+    /// </summary>
+    public string? DureeValiditeAnnees { get; set; }
 }

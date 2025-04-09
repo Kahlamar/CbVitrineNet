@@ -1,9 +1,22 @@
-﻿namespace VitrineApi.Classes.Dtos.CV
+namespace VitrineApi.Classes.Dtos.CV;
+
+/// <summary>
+/// Certification DTO
+/// </summary>
+public class CertificationDto
 {
-    public class CertificationDto
-    {
-        public string? Titre { get; set; }
-        public string? OrganismeCertifiant { get; set; }
-        public string? DureeValiditeAnnees { get; set; }
-    }
+    /// <summary>
+    /// Titre de la Certification
+    /// </summary>
+    public string? Titre { get; set; }
+
+    /// <summary>
+    /// Organisme Certifiant
+    /// </summary>
+    public string? OrganismeCertifiant { get; set; }
+
+    /// <summary>
+    /// Durée de validité en années
+    /// </summary>
+    public string? DureeValiditeAnnees { get; set; }
 }

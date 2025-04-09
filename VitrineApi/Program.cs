@@ -7,8 +7,15 @@ using VitrineApi.Services.Testing;
 
 namespace VitrineApi;
 
+/// <summary>
+/// Classe principale
+/// </summary>
 public static class Program
 {
+    /// <summary>
+    /// Fonction principale
+    /// </summary>
+    /// <param name="args"></param>
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
@@ -30,6 +37,9 @@ public static class Program
         app.Run();
     }
 
+    /// <summary>
+    /// Fonction de Seed à destination de MongoDB
+    /// </summary>
     public static void SeedMongoDb()
     {
         MongoClient mongoClient = new("mongodb://root:example@mongodb/");
@@ -176,6 +186,3 @@ public static class Program
         }
     }
 }
-
-// TODO: Faire le README.md
-// TODO: Faire les Tests Unitaires, BDD & Fonctionnels

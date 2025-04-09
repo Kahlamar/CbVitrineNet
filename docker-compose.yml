@@ -1,4 +1,4 @@
-﻿volumes:
+volumes:
   sqlservervitrine_data:
   sonarqube_data:
   sonarqube_extensions:

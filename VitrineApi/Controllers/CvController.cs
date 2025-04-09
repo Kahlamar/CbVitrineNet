@@ -1,20 +1,27 @@
 using Microsoft.AspNetCore.Mvc;
-using AutoMapper;
-using VitrineApi.Classes.Dtos.CV;
-using VitrineApi.Classes.CV;
 using VitrineApi.Services.Interfaces;
-using VitrineApi.Services;
 using MongoDB.Bson;
-using MongoDB.Driver;
 
 namespace VitrineApi.Controllers;
 
+
+/// <summary>
+/// Contrôleur Principal de la section CV
+/// </summary>
+/// <param name="cvService">Service CV</param>
 [Route("api/cv")]
 [ApiController]
 public class CvController(ICvService cvService) : ControllerBase
 {
+    /// <summary>
+    /// Affectation du service CV
+    /// </summary>
     private readonly ICvService _cvService = cvService;
 
+    /// <summary>
+    /// Endpoint de récupérations de toutes les expériences.
+    /// </summary>
+    /// <returns>Liste de toutes les expériences</returns>
     [HttpGet("experiences")]
     public async Task<ActionResult> GetAllExperiences()
     {
@@ -22,6 +29,10 @@ public class CvController(ICvService cvService) : ControllerBase
         return Ok(result.ToJson());
     }
 
+    /// <summary>
+    /// Endpoint de récupérations de toutes les formations.
+    /// </summary>
+    /// <returns>Liste de toutes les formations</returns>
     [HttpGet("formations")]
     public async Task<ActionResult> GetAllFormations()
     {
@@ -29,6 +40,10 @@ public class CvController(ICvService cvService) : ControllerBase
         return Ok(result.ToJson());
     }
 
+    /// <summary>
+    /// Endpoint de récupérations de toutes les certifications.
+    /// </summary>
+    /// <returns>Liste de toutes les certifications</returns>
     [HttpGet("certifications")]
     public async Task<ActionResult> GetAllCertifications()
     {
